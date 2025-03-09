@@ -5,90 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EmerClone - Shop Acc Blox Fruit</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
         body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Press Start 2P', cursive;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             text-align: center;
-            background: url('image.png') no-repeat center center fixed;
+            background: url('https://i.kym-cdn.com/photos/images/original/001/917/318/69f.jpg') no-repeat center center fixed;
             background-size: cover;
             color: white;
-            overflow-x: hidden;
         }
         .container {
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.8);
             padding: 20px;
-            border-radius: 10px;
-            width: 60%;
-            margin: 50px auto;
-            box-shadow: 0 0 10px cyan;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 50px;
         }
         h1 {
-            font-size: 24px;
-            text-shadow: 3px 3px 5px cyan;
+            color: cyan;
         }
-        .account-category {
-            background: linear-gradient(45deg, #ff00ff, #00ffff);
-            color: black;
+        .acc-category {
+            background: #ff9800;
             padding: 10px;
-            margin: 10px;
+            margin: 10px 0;
             border-radius: 10px;
             cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: 0.3s;
         }
-        .account-category:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 15px yellow;
+        .acc-category:hover {
+            background: #e65100;
         }
-        .account-list {
+        .acc-list {
             display: none;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
             padding: 10px;
             border-radius: 10px;
-            margin-top: 5px;
         }
-        .account-item {
-            padding: 5px;
+        .acc-item {
+            background: rgba(255, 255, 255, 0.2);
             margin: 5px;
-            background: rgba(0, 0, 0, 0.8);
+            padding: 5px;
             border-radius: 5px;
         }
     </style>
+    <script>
+        function toggleList(id) {
+            var list = document.getElementById(id);
+            if (list.style.display === "block") {
+                list.style.display = "none";
+            } else {
+                list.style.display = "block";
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>🔥 Chào mừng đến với EmerClone 🔥</h1>
         <p>Shop bán tài khoản Blox Fruit uy tín, giá rẻ, giao dịch nhanh chóng.</p>
         
-        <div class="account-category" onclick="toggleList('list20k')">Acc 20K</div>
-        <div id="list20k" class="account-list">
-            <div class="account-item">Acc #1: Level 1000 - Trái Smoke</div>
-            <div class="account-item">Acc #2: Level 1100 - Trái Flame</div>
+        <div class="acc-category" onclick="toggleList('acc10k')">🎮 Acc 10K</div>
+        <div id="acc10k" class="acc-list">
+            <div class="acc-item">🔹 Acc #1: Level 2000 - 10K VNĐ</div>
+            <div class="acc-item">🔹 Acc #2: Level 1800 - 10K VNĐ</div>
         </div>
         
-        <div class="account-category" onclick="toggleList('list50k')">Acc 50K</div>
-        <div id="list50k" class="account-list">
-            <div class="account-item">Acc #3: Level 2000 - Trái Ice</div>
-            <div class="account-item">Acc #4: Level 2100 - Trái Magma</div>
+        <div class="acc-category" onclick="toggleList('acc20k')">🎮 Acc 20K</div>
+        <div id="acc20k" class="acc-list">
+            <div class="acc-item">🔹 Acc #3: Level 2200 - 20K VNĐ</div>
+            <div class="acc-item">🔹 Acc #4: Level 2100 - 20K VNĐ</div>
         </div>
         
-        <div class="account-category" onclick="toggleList('list100k')">Acc 100K</div>
-        <div id="list100k" class="account-list">
-            <div class="account-item">Acc #5: Level 2300 - Trái Buddha</div>
-            <div class="account-item">Acc #6: Level 2400 - Trái Dragon</div>
+        <div class="acc-category" onclick="toggleList('acc50k')">🎮 Acc 50K</div>
+        <div id="acc50k" class="acc-list">
+            <div class="acc-item">🔹 Acc #5: Level 2300 - 50K VNĐ</div>
+            <div class="acc-item">🔹 Acc #6: Level 2250 - 50K VNĐ</div>
+        </div>
+        
+        <div class="acc-category" onclick="toggleList('acc100k')">🎮 Acc 100K</div>
+        <div id="acc100k" class="acc-list">
+            <div class="acc-item">🔹 Acc #7: Level 2450 - 100K VNĐ</div>
+            <div class="acc-item">🔹 Acc #8: Level 2400 - 100K VNĐ</div>
+        </div>
+        
+        <div class="acc-category" onclick="toggleList('accvip')">💎 Acc VIP</div>
+        <div id="accvip" class="acc-list">
+            <div class="acc-item">✨ Acc #9: Level 2500 - Trái Rồng - 500K VNĐ</div>
+            <div class="acc-item">✨ Acc #10: Level 2500 - Trái Băng - 500K VNĐ</div>
         </div>
     </div>
-    
-    <script>
-        function toggleList(id) {
-            let list = document.getElementById(id);
-            if (list.style.display === 'block') {
-                list.style.display = 'none';
-            } else {
-                list.style.display = 'block';
-            }
-        }
-    </script>
 </body>
 </html>
