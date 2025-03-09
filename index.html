@@ -5,38 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EmerClone - Shop Acc Blox Fruit</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
         body {
-            background: url('file:///C:/Users/THOA/Downloads/image.png') no-repeat center center fixed;
-            background-size: cover;
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
             margin: 0;
             padding: 0;
+            font-family: 'Press Start 2P', cursive;
+            text-align: center;
+            background: url('image.png') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            overflow-x: hidden;
         }
         .container {
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.7);
             padding: 20px;
             border-radius: 10px;
-            width: 50%;
-            margin: 100px auto;
+            width: 60%;
+            margin: 50px auto;
+            box-shadow: 0 0 10px cyan;
         }
         h1 {
-            color: cyan;
+            font-size: 24px;
+            text-shadow: 3px 3px 5px cyan;
         }
         .account-category {
-            background: cyan;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: black;
             padding: 10px;
             margin: 10px;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .account-category:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px yellow;
         }
         .account-list {
             display: none;
-            background: white;
-            color: black;
+            background: rgba(255, 255, 255, 0.2);
             padding: 10px;
+            border-radius: 10px;
             margin-top: 5px;
+        }
+        .account-item {
+            padding: 5px;
+            margin: 5px;
+            background: rgba(0, 0, 0, 0.8);
             border-radius: 5px;
         }
     </style>
@@ -46,32 +61,32 @@
         <h1>🔥 Chào mừng đến với EmerClone 🔥</h1>
         <p>Shop bán tài khoản Blox Fruit uy tín, giá rẻ, giao dịch nhanh chóng.</p>
         
-        <div class="account-category" onclick="toggleList('acc20k')">Acc 20K</div>
-        <div id="acc20k" class="account-list">
-            <p>Acc 1: Level 1500 - Trái Lửa</p>
-            <p>Acc 2: Level 1600 - Trái Băng</p>
+        <div class="account-category" onclick="toggleList('list20k')">Acc 20K</div>
+        <div id="list20k" class="account-list">
+            <div class="account-item">Acc #1: Level 1000 - Trái Smoke</div>
+            <div class="account-item">Acc #2: Level 1100 - Trái Flame</div>
         </div>
         
-        <div class="account-category" onclick="toggleList('acc50k')">Acc 50K</div>
-        <div id="acc50k" class="account-list">
-            <p>Acc 1: Level 2000 - Trái Quake</p>
-            <p>Acc 2: Level 2100 - Trái Rồng</p>
+        <div class="account-category" onclick="toggleList('list50k')">Acc 50K</div>
+        <div id="list50k" class="account-list">
+            <div class="account-item">Acc #3: Level 2000 - Trái Ice</div>
+            <div class="account-item">Acc #4: Level 2100 - Trái Magma</div>
         </div>
         
-        <div class="account-category" onclick="toggleList('acc100k')">Acc 100K</div>
-        <div id="acc100k" class="account-list">
-            <p>Acc 1: Level 2300 - Trái Bóng Tối</p>
-            <p>Acc 2: Level 2400 - Trái Rồng</p>
+        <div class="account-category" onclick="toggleList('list100k')">Acc 100K</div>
+        <div id="list100k" class="account-list">
+            <div class="account-item">Acc #5: Level 2300 - Trái Buddha</div>
+            <div class="account-item">Acc #6: Level 2400 - Trái Dragon</div>
         </div>
     </div>
-
+    
     <script>
         function toggleList(id) {
-            var element = document.getElementById(id);
-            if (element.style.display === "none" || element.style.display === "") {
-                element.style.display = "block";
+            let list = document.getElementById(id);
+            if (list.style.display === 'block') {
+                list.style.display = 'none';
             } else {
-                element.style.display = "none";
+                list.style.display = 'block';
             }
         }
     </script>
