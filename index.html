@@ -3,56 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EmerClone - Shop Acc Blox Fruit</title>
+    <title>EmerClone Shop</title>
     <style>
         body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            text-align: center;
-            background: url('https://i.kym-cdn.com/photos/images/original/001/917/318/69f.jpg') no-repeat center center fixed;
+            background-image: url('/mnt/data/image.png');
             background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
             color: white;
         }
         .container {
             background: rgba(0, 0, 0, 0.8);
             padding: 20px;
-            border-radius: 15px;
+            border-radius: 10px;
             display: inline-block;
             margin-top: 50px;
         }
-        h1 {
-            color: cyan;
-        }
-        .acc-category {
-            background: #ff9800;
-            padding: 10px;
+        .category {
             margin: 10px 0;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: 0.3s;
         }
-        .acc-category:hover {
-            background: #e65100;
-        }
-        .acc-list {
+        .details {
             display: none;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 10px;
-            border-radius: 10px;
-        }
-        .acc-item {
             background: rgba(255, 255, 255, 0.2);
-            margin: 5px;
-            padding: 5px;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+        button {
+            background-color: cyan;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
             border-radius: 5px;
         }
     </style>
     <script>
-        function toggleList(id) {
-            var list = document.getElementById(id);
-            if (list.style.display === "block") {
-                list.style.display = "none";
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === "none") {
+                details.style.display = "block";
             } else {
-                list.style.display = "block";
+                details.style.display = "none";
             }
         }
     </script>
@@ -62,35 +54,31 @@
         <h1>🔥 Chào mừng đến với EmerClone 🔥</h1>
         <p>Shop bán tài khoản Blox Fruit uy tín, giá rẻ, giao dịch nhanh chóng.</p>
         
-        <div class="acc-category" onclick="toggleList('acc10k')">🎮 Acc 10K</div>
-        <div id="acc10k" class="acc-list">
-            <div class="acc-item">🔹 Acc #1: Level 2000 - 10K VNĐ</div>
-            <div class="acc-item">🔹 Acc #2: Level 1800 - 10K VNĐ</div>
+        <div class="category">
+            <button onclick="toggleDetails('acc20k')">Acc 20K</button>
+            <div id="acc20k" class="details">
+                <p>Level: 1500</p>
+                <p>Môn võ: Electric Claw, Sharkman Karate</p>
+            </div>
         </div>
         
-        <div class="acc-category" onclick="toggleList('acc20k')">🎮 Acc 20K</div>
-        <div id="acc20k" class="acc-list">
-            <div class="acc-item">🔹 Acc #3: Level 2200 - 20K VNĐ</div>
-            <div class="acc-item">🔹 Acc #4: Level 2100 - 20K VNĐ</div>
+        <div class="category">
+            <button onclick="toggleDetails('acc50k')">Acc 50K</button>
+            <div id="acc50k" class="details">
+                <p>Level: 2000</p>
+                <p>Môn võ: Superhuman, Death Step</p>
+            </div>
         </div>
         
-        <div class="acc-category" onclick="toggleList('acc50k')">🎮 Acc 50K</div>
-        <div id="acc50k" class="acc-list">
-            <div class="acc-item">🔹 Acc #5: Level 2300 - 50K VNĐ</div>
-            <div class="acc-item">🔹 Acc #6: Level 2250 - 50K VNĐ</div>
+        <div class="category">
+            <button onclick="toggleDetails('acc100k')">Acc 100K</button>
+            <div id="acc100k" class="details">
+                <p>Level: 2450</p>
+                <p>Môn võ: Godhuman, Dragon Talon</p>
+            </div>
         </div>
         
-        <div class="acc-category" onclick="toggleList('acc100k')">🎮 Acc 100K</div>
-        <div id="acc100k" class="acc-list">
-            <div class="acc-item">🔹 Acc #7: Level 2450 - 100K VNĐ</div>
-            <div class="acc-item">🔹 Acc #8: Level 2400 - 100K VNĐ</div>
-        </div>
-        
-        <div class="acc-category" onclick="toggleList('accvip')">💎 Acc VIP</div>
-        <div id="accvip" class="acc-list">
-            <div class="acc-item">✨ Acc #9: Level 2500 - Trái Rồng - 500K VNĐ</div>
-            <div class="acc-item">✨ Acc #10: Level 2500 - Trái Băng - 500K VNĐ</div>
-        </div>
+        <p>Liên hệ mua hàng qua Facebook: <a href="https://www.facebook.com/profile.php?id=61558234917324" target="_blank">Click vào đây</a></p>
     </div>
 </body>
 </html>
