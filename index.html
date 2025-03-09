@@ -7,65 +7,83 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: url('https://i.imgur.com/your-meme-image.jpg') no-repeat center center fixed;
+            background: url('https://i.kym-cdn.com/photos/images/original/002/250/753/6fb.jpg') no-repeat center center fixed;
             background-size: cover;
-            color: white;
             text-align: center;
+            color: white;
+            padding: 20px;
         }
         .container {
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.8);
             padding: 20px;
-            border-radius: 15px;
-            display: inline-block;
-            margin-top: 50px;
-        }
-        .category {
-            margin: 20px 0;
-            background: #ffcc00;
-            padding: 10px;
             border-radius: 10px;
-            cursor: pointer;
-            font-weight: bold;
+            display: inline-block;
+        }
+        h1 {
+            color: cyan;
+        }
+        .account-category {
+            margin-top: 20px;
         }
         .account-list {
             display: none;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .toggle-btn {
+            background: cyan;
             color: black;
             padding: 10px;
-            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
         }
     </style>
     <script>
         function toggleList(id) {
-            var element = document.getElementById(id);
-            element.style.display = (element.style.display === 'block') ? 'none' : 'block';
+            var list = document.getElementById(id);
+            if (list.style.display === "none" || list.style.display === "") {
+                list.style.display = "block";
+            } else {
+                list.style.display = "none";
+            }
         }
     </script>
 </head>
 <body>
     <div class="container">
         <h1>🔥 Chào mừng đến với EmerClone 🔥</h1>
-        <p>Shop bán tài khoản Blox Fruit uy tín, giá rẻ!</p>
+        <p>Shop bán tài khoản Blox Fruit uy tín, giá rẻ, giao dịch nhanh chóng.</p>
         
-        <div class="category" onclick="toggleList('acc20k')">Tài khoản 20K VNĐ</div>
-        <div id="acc20k" class="account-list">
-            <p>Acc #1 - Level 1000 - Trái Bom</p>
-            <p>Acc #2 - Level 1200 - Trái Spin</p>
+        <div class="account-category">
+            <button class="toggle-btn" onclick="toggleList('acc20k')">Acc 20K</button>
+            <div id="acc20k" class="account-list">
+                <p>🔹 Acc 1: Level 1000 - Trái Smoke</p>
+                <p>🔹 Acc 2: Level 950 - Trái Spring</p>
+            </div>
         </div>
 
-        <div class="category" onclick="toggleList('acc50k')">Tài khoản 50K VNĐ</div>
-        <div id="acc50k" class="account-list">
-            <p>Acc #3 - Level 1500 - Trái Flame</p>
-            <p>Acc #4 - Level 1600 - Trái Ice</p>
+        <div class="account-category">
+            <button class="toggle-btn" onclick="toggleList('acc50k')">Acc 50K</button>
+            <div id="acc50k" class="account-list">
+                <p>🔹 Acc 1: Level 1500 - Trái Magma</p>
+                <p>🔹 Acc 2: Level 1400 - Trái Light</p>
+            </div>
         </div>
 
-        <div class="category" onclick="toggleList('acc100k')">Tài khoản 100K VNĐ</div>
-        <div id="acc100k" class="account-list">
-            <p>Acc #5 - Level 2000 - Trái Rồng</p>
-            <p>Acc #6 - Level 2100 - Trái Quake</p>
+        <div class="account-category">
+            <button class="toggle-btn" onclick="toggleList('acc100k')">Acc 100K</button>
+            <div id="acc100k" class="account-list">
+                <p>🔹 Acc 1: Level 2000 - Trái Rồng</p>
+                <p>🔹 Acc 2: Level 1950 - Trái Băng</p>
+            </div>
         </div>
-
-        <p><a href="https://www.facebook.com/profile.php?id=61558234917324" style="color: yellow;">Liên hệ mua ngay</a></p>
+    </div>
+</body>
+</html>
+iên hệ mua ngay</a></p>
     </div>
 </body>
 </html>
