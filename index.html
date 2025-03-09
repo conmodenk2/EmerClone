@@ -1,78 +1,71 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EmerClone Shop</title>
+    <title>EmerClone - Shop Acc Blox Fruit</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #111;
+            background: url('https://i.imgur.com/your-meme-image.jpg') no-repeat center center fixed;
+            background-size: cover;
             color: white;
             text-align: center;
-            padding: 20px;
         }
         .container {
-            max-width: 600px;
-            margin: auto;
-            background: #222;
+            background: rgba(0, 0, 0, 0.7);
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px cyan;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 50px;
         }
         .category {
-            background: #333;
+            margin: 20px 0;
+            background: #ffcc00;
             padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
+            font-weight: bold;
         }
         .account-list {
             display: none;
-            margin-top: 10px;
-        }
-        .account {
-            background: #444;
-            padding: 8px;
-            margin: 5px 0;
-            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+            padding: 10px;
+            border-radius: 10px;
         }
     </style>
+    <script>
+        function toggleList(id) {
+            var element = document.getElementById(id);
+            element.style.display = (element.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
 </head>
 <body>
     <div class="container">
-        <h1>🔥 EmerClone Shop 🔥</h1>
+        <h1>🔥 Chào mừng đến với EmerClone 🔥</h1>
         <p>Shop bán tài khoản Blox Fruit uy tín, giá rẻ!</p>
         
-        <div class="category" onclick="toggleList('list-20k')">Acc 20K VNĐ</div>
-        <div id="list-20k" class="account-list">
-            <div class="account">Acc #1 - Level 1000 - Trái Bomb</div>
-            <div class="account">Acc #2 - Level 1200 - Trái Spin</div>
+        <div class="category" onclick="toggleList('acc20k')">Tài khoản 20K VNĐ</div>
+        <div id="acc20k" class="account-list">
+            <p>Acc #1 - Level 1000 - Trái Bom</p>
+            <p>Acc #2 - Level 1200 - Trái Spin</p>
         </div>
-        
-        <div class="category" onclick="toggleList('list-50k')">Acc 50K VNĐ</div>
-        <div id="list-50k" class="account-list">
-            <div class="account">Acc #3 - Level 1800 - Trái Magma</div>
-            <div class="account">Acc #4 - Level 2000 - Trái Light</div>
-        </div>
-        
-        <div class="category" onclick="toggleList('list-100k')">Acc 100K VNĐ</div>
-        <div id="list-100k" class="account-list">
-            <div class="account">Acc #5 - Level 2300 - Trái Quake</div>
-            <div class="account">Acc #6 - Level 2450 - Trái Rồng</div>
-        </div>
-    </div>
 
-    <script>
-        function toggleList(id) {
-            var list = document.getElementById(id);
-            if (list.style.display === "none" || list.style.display === "") {
-                list.style.display = "block";
-            } else {
-                list.style.display = "none";
-            }
-        }
-    </script>
+        <div class="category" onclick="toggleList('acc50k')">Tài khoản 50K VNĐ</div>
+        <div id="acc50k" class="account-list">
+            <p>Acc #3 - Level 1500 - Trái Flame</p>
+            <p>Acc #4 - Level 1600 - Trái Ice</p>
+        </div>
+
+        <div class="category" onclick="toggleList('acc100k')">Tài khoản 100K VNĐ</div>
+        <div id="acc100k" class="account-list">
+            <p>Acc #5 - Level 2000 - Trái Rồng</p>
+            <p>Acc #6 - Level 2100 - Trái Quake</p>
+        </div>
+
+        <p><a href="https://www.facebook.com/profile.php?id=61558234917324" style="color: yellow;">Liên hệ mua ngay</a></p>
+    </div>
 </body>
 </html>
