@@ -3,87 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EmerClone - Shop Acc Blox Fruit</title>
+    <title>EmerClone - Shop Blox Fruit</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: url('https://i.kym-cdn.com/photos/images/original/002/250/753/6fb.jpg') no-repeat center center fixed;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://source.unsplash.com/random/1600x900/?meme');
             background-size: cover;
-            text-align: center;
-            color: white;
-            padding: 20px;
+            background-position: center;
+            font-family: Arial, sans-serif;
         }
         .container {
             background: rgba(0, 0, 0, 0.8);
             padding: 20px;
             border-radius: 10px;
-            display: inline-block;
-        }
-        h1 {
+            text-align: center;
             color: cyan;
         }
-        .account-category {
-            margin-top: 20px;
-        }
-        .account-list {
-            display: none;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .toggle-btn {
+        .category {
             background: cyan;
             color: black;
             padding: 10px;
-            border: none;
-            cursor: pointer;
+            margin: 10px 0;
             border-radius: 5px;
+            cursor: pointer;
+        }
+        .accounts {
+            display: none;
             margin-top: 10px;
         }
-    </style>
-    <script>
-        function toggleList(id) {
-            var list = document.getElementById(id);
-            if (list.style.display === "none" || list.style.display === "") {
-                list.style.display = "block";
-            } else {
-                list.style.display = "none";
-            }
+        .account {
+            background: white;
+            color: black;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
         }
-    </script>
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>🔥 Chào mừng đến với EmerClone 🔥</h1>
         <p>Shop bán tài khoản Blox Fruit uy tín, giá rẻ, giao dịch nhanh chóng.</p>
         
-        <div class="account-category">
-            <button class="toggle-btn" onclick="toggleList('acc20k')">Acc 20K</button>
-            <div id="acc20k" class="account-list">
-                <p>🔹 Acc 1: Level 1000 - Trái Smoke</p>
-                <p>🔹 Acc 2: Level 950 - Trái Spring</p>
-            </div>
+        <div class="category" onclick="toggleAccounts('acc20k')">Acc 20K</div>
+        <div id="acc20k" class="accounts">
+            <div class="account">Acc #1 - Level 1500 - Trái Lửa</div>
+            <div class="account">Acc #2 - Level 1400 - Trái Khói</div>
         </div>
 
-        <div class="account-category">
-            <button class="toggle-btn" onclick="toggleList('acc50k')">Acc 50K</button>
-            <div id="acc50k" class="account-list">
-                <p>🔹 Acc 1: Level 1500 - Trái Magma</p>
-                <p>🔹 Acc 2: Level 1400 - Trái Light</p>
-            </div>
+        <div class="category" onclick="toggleAccounts('acc50k')">Acc 50K</div>
+        <div id="acc50k" class="accounts">
+            <div class="account">Acc #3 - Level 2000 - Trái Rồng</div>
+            <div class="account">Acc #4 - Level 1950 - Trái Băng</div>
         </div>
 
-        <div class="account-category">
-            <button class="toggle-btn" onclick="toggleList('acc100k')">Acc 100K</button>
-            <div id="acc100k" class="account-list">
-                <p>🔹 Acc 1: Level 2000 - Trái Rồng</p>
-                <p>🔹 Acc 2: Level 1950 - Trái Băng</p>
-            </div>
+        <div class="category" onclick="toggleAccounts('acc100k')">Acc 100K</div>
+        <div id="acc100k" class="accounts">
+            <div class="account">Acc #5 - Level 2300 - Trái Bóng Tối</div>
+            <div class="account">Acc #6 - Level 2200 - Trái Quake</div>
         </div>
     </div>
-</body>
-</html>
-iên hệ mua ngay</a></p>
-    </div>
+
+    <script>
+        function toggleAccounts(id) {
+            let element = document.getElementById(id);
+            element.style.display = element.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
 </body>
 </html>
