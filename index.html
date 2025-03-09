@@ -6,48 +6,44 @@
     <title>EmerClone - Shop Blox Fruit</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background: url('/mnt/data/image.png') no-repeat center center fixed;
+            background-image: url('file-51z2He4agq79Ahq8ypg4P3');
             background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background-position: center;
+            text-align: center;
+            color: white;
         }
         .container {
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            width: 60%;
+            margin: 50px auto;
             padding: 20px;
             border-radius: 10px;
-            text-align: center;
-            width: 90%;
-            max-width: 600px;
         }
         h1 {
             color: cyan;
         }
-        .account-list {
-            margin-top: 20px;
-        }
-        .account-category {
-            background: cyan;
-            color: black;
+        .category {
+            background: rgba(0, 255, 255, 0.2);
             padding: 10px;
+            margin: 10px;
             border-radius: 5px;
             cursor: pointer;
-            margin: 10px 0;
         }
-        .account-details {
+        .details {
             display: none;
-            background: white;
-            color: black;
-            padding: 10px;
-            border-radius: 5px;
-            margin-top: 5px;
+            margin-top: 10px;
         }
-        a {
+        .category:hover .details {
+            display: block;
+        }
+        .contact {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .contact a {
             color: yellow;
             text-decoration: none;
         }
@@ -55,30 +51,38 @@
 </head>
 <body>
     <div class="container">
+        <img src="file-8jNkwPjv9839wsS9EVj1aV" alt="EmerClone Logo" width="100">
         <h1>🔥 Chào mừng đến với EmerClone 🔥</h1>
         <p>Shop bán tài khoản Blox Fruit uy tín, giá rẻ, giao dịch nhanh chóng.</p>
-        <p>Liên hệ mua hàng tại: <a href="https://www.facebook.com/profile.php?id=61558234917324" target="_blank">Facebook</a></p>
         
-        <div class="account-list">
-            <div class="account-category" onclick="toggleDetails('acc20k')">Acc 20K</div>
-            <div class="account-details" id="acc20k">Level 1500+, Có haki, Một số môn võ cơ bản</div>
-
-            <div class="account-category" onclick="toggleDetails('acc50k')">Acc 50K</div>
-            <div class="account-details" id="acc50k">Level 2000+, Full haki, Một số môn võ nâng cao</div>
-
-            <div class="account-category" onclick="toggleDetails('acc100k')">Acc 100K</div>
-            <div class="account-details" id="acc100k">Level 2450+, Full haki, Môn võ mạnh nhất</div>
+        <div class="category">
+            <h2>Acc 20K</h2>
+            <div class="details">
+                <p>Level: 700+</p>
+                <p>Võ: Electric, Dark Step</p>
+            </div>
+        </div>
+        
+        <div class="category">
+            <h2>Acc 50K</h2>
+            <div class="details">
+                <p>Level: 1500+</p>
+                <p>Võ: Death Step, Sharkman Karate</p>
+            </div>
+        </div>
+        
+        <div class="category">
+            <h2>Acc 100K</h2>
+            <div class="details">
+                <p>Level: Max</p>
+                <p>Võ: Godhuman, Dragon Talon</p>
+            </div>
+        </div>
+        
+        <div class="contact">
+            <p>Liên hệ mua acc tại: <a href="https://www.facebook.com/profile.php?id=61558234917324" target="_blank">Facebook của tôi</a></p>
         </div>
     </div>
-    <script>
-        function toggleDetails(id) {
-            var element = document.getElementById(id);
-            if (element.style.display === "none" || element.style.display === "") {
-                element.style.display = "block";
-            } else {
-                element.style.display = "none";
-            }
-        }
-    </script>
 </body>
 </html>
+
