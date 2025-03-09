@@ -3,82 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EmerClone Shop</title>
+    <title>EmerClone - Shop Blox Fruit</title>
     <style>
         body {
-            background-image: url('/mnt/data/image.png');
-            background-size: cover;
-            background-position: center;
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
-            text-align: center;
-            color: white;
+            background: url('/mnt/data/image.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         .container {
             background: rgba(0, 0, 0, 0.8);
+            color: white;
             padding: 20px;
             border-radius: 10px;
-            display: inline-block;
-            margin-top: 50px;
+            text-align: center;
+            width: 90%;
+            max-width: 600px;
         }
-        .category {
+        h1 {
+            color: cyan;
+        }
+        .account-list {
+            margin-top: 20px;
+        }
+        .account-category {
+            background: cyan;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
             margin: 10px 0;
         }
-        .details {
+        .account-details {
             display: none;
-            background: rgba(255, 255, 255, 0.2);
+            background: white;
+            color: black;
             padding: 10px;
+            border-radius: 5px;
             margin-top: 5px;
-            border-radius: 5px;
         }
-        button {
-            background-color: cyan;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 5px;
+        a {
+            color: yellow;
+            text-decoration: none;
         }
     </style>
-    <script>
-        function toggleDetails(id) {
-            var details = document.getElementById(id);
-            if (details.style.display === "none") {
-                details.style.display = "block";
-            } else {
-                details.style.display = "none";
-            }
-        }
-    </script>
 </head>
 <body>
     <div class="container">
         <h1>🔥 Chào mừng đến với EmerClone 🔥</h1>
         <p>Shop bán tài khoản Blox Fruit uy tín, giá rẻ, giao dịch nhanh chóng.</p>
+        <p>Liên hệ mua hàng tại: <a href="https://www.facebook.com/profile.php?id=61558234917324" target="_blank">Facebook</a></p>
         
-        <div class="category">
-            <button onclick="toggleDetails('acc20k')">Acc 20K</button>
-            <div id="acc20k" class="details">
-                <p>Level: 1500</p>
-                <p>Môn võ: Electric Claw, Sharkman Karate</p>
-            </div>
+        <div class="account-list">
+            <div class="account-category" onclick="toggleDetails('acc20k')">Acc 20K</div>
+            <div class="account-details" id="acc20k">Level 1500+, Có haki, Một số môn võ cơ bản</div>
+
+            <div class="account-category" onclick="toggleDetails('acc50k')">Acc 50K</div>
+            <div class="account-details" id="acc50k">Level 2000+, Full haki, Một số môn võ nâng cao</div>
+
+            <div class="account-category" onclick="toggleDetails('acc100k')">Acc 100K</div>
+            <div class="account-details" id="acc100k">Level 2450+, Full haki, Môn võ mạnh nhất</div>
         </div>
-        
-        <div class="category">
-            <button onclick="toggleDetails('acc50k')">Acc 50K</button>
-            <div id="acc50k" class="details">
-                <p>Level: 2000</p>
-                <p>Môn võ: Superhuman, Death Step</p>
-            </div>
-        </div>
-        
-        <div class="category">
-            <button onclick="toggleDetails('acc100k')">Acc 100K</button>
-            <div id="acc100k" class="details">
-                <p>Level: 2450</p>
-                <p>Môn võ: Godhuman, Dragon Talon</p>
-            </div>
-        </div>
-        
-        <p>Liên hệ mua hàng qua Facebook: <a href="https://www.facebook.com/profile.php?id=61558234917324" target="_blank">Click vào đây</a></p>
     </div>
+    <script>
+        function toggleDetails(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
