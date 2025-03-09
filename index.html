@@ -1,33 +1,78 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EmerClone - Shop Acc Blox Fruit</title>
-    <link rel="stylesheet" href="style.css">
+    <title>EmerClone Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px cyan;
+        }
+        .category {
+            background: #333;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .account-list {
+            display: none;
+            margin-top: 10px;
+        }
+        .account {
+            background: #444;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <!-- Logo -->
-        <div class="logo-container">
-            <img src="assets/logo.png" alt="EmerClone Logo" class="logo">
+        <h1>🔥 EmerClone Shop 🔥</h1>
+        <p>Shop bán tài khoản Blox Fruit uy tín, giá rẻ!</p>
+        
+        <div class="category" onclick="toggleList('list-20k')">Acc 20K VNĐ</div>
+        <div id="list-20k" class="account-list">
+            <div class="account">Acc #1 - Level 1000 - Trái Bomb</div>
+            <div class="account">Acc #2 - Level 1200 - Trái Spin</div>
         </div>
         
-        <!-- Tiêu đề -->
-        <h1>🔥 CHÀO MỪNG ĐẾN VỚI EMERCLONE 🔥</h1>
-        <p>Shop bán tài khoản Blox Fruit uy tín, giá rẻ, giao dịch nhanh chóng.</p>
-
-        <!-- Danh sách tài khoản -->
-        <div class="account-list">
-            <h2>⭐ Danh sách tài khoản ⭐</h2>
-            <div class="account-item">🔥 Acc #1: Level 2450 - Trái Rồng - 300K VNĐ</div>
-            <div class="account-item">❄️ Acc #2: Level 2300 - Trái Băng - 250K VNĐ</div>
-            <div class="account-item">🌊 Acc #3: Level 2200 - Trái Quake - 200K VNĐ</div>
+        <div class="category" onclick="toggleList('list-50k')">Acc 50K VNĐ</div>
+        <div id="list-50k" class="account-list">
+            <div class="account">Acc #3 - Level 1800 - Trái Magma</div>
+            <div class="account">Acc #4 - Level 2000 - Trái Light</div>
         </div>
         
-        <!-- Nút liên hệ -->
-        <a href="https://www.facebook.com/profile.php?id=61558234917324" class="buy-button">🚀 Liên hệ mua ngay 🚀</a>
+        <div class="category" onclick="toggleList('list-100k')">Acc 100K VNĐ</div>
+        <div id="list-100k" class="account-list">
+            <div class="account">Acc #5 - Level 2300 - Trái Quake</div>
+            <div class="account">Acc #6 - Level 2450 - Trái Rồng</div>
+        </div>
     </div>
+
+    <script>
+        function toggleList(id) {
+            var list = document.getElementById(id);
+            if (list.style.display === "none" || list.style.display === "") {
+                list.style.display = "block";
+            } else {
+                list.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
-
