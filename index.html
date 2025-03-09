@@ -3,44 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EmerClone - Shop Blox Fruit</title>
+    <title>EmerClone - Shop Acc Blox Fruit</title>
     <style>
         body {
+            background: url('image.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-image: url('https://source.unsplash.com/random/1600x900/?meme');
-            background-size: cover;
-            background-position: center;
-            font-family: Arial, sans-serif;
         }
         .container {
             background: rgba(0, 0, 0, 0.8);
             padding: 20px;
             border-radius: 10px;
-            text-align: center;
+            width: 50%;
+            margin: 100px auto;
+        }
+        h1 {
             color: cyan;
         }
-        .category {
+        .account-category {
             background: cyan;
-            color: black;
             padding: 10px;
-            margin: 10px 0;
+            margin: 10px;
             border-radius: 5px;
             cursor: pointer;
         }
-        .accounts {
+        .account-list {
             display: none;
-            margin-top: 10px;
-        }
-        .account {
             background: white;
             color: black;
-            padding: 8px;
-            margin: 5px 0;
+            padding: 10px;
+            margin-top: 5px;
             border-radius: 5px;
         }
     </style>
@@ -50,29 +46,33 @@
         <h1>🔥 Chào mừng đến với EmerClone 🔥</h1>
         <p>Shop bán tài khoản Blox Fruit uy tín, giá rẻ, giao dịch nhanh chóng.</p>
         
-        <div class="category" onclick="toggleAccounts('acc20k')">Acc 20K</div>
-        <div id="acc20k" class="accounts">
-            <div class="account">Acc #1 - Level 1500 - Trái Lửa</div>
-            <div class="account">Acc #2 - Level 1400 - Trái Khói</div>
+        <div class="account-category" onclick="toggleList('acc20k')">Acc 20K</div>
+        <div id="acc20k" class="account-list">
+            <p>Acc 1: Level 1500 - Trái Lửa</p>
+            <p>Acc 2: Level 1600 - Trái Băng</p>
         </div>
-
-        <div class="category" onclick="toggleAccounts('acc50k')">Acc 50K</div>
-        <div id="acc50k" class="accounts">
-            <div class="account">Acc #3 - Level 2000 - Trái Rồng</div>
-            <div class="account">Acc #4 - Level 1950 - Trái Băng</div>
+        
+        <div class="account-category" onclick="toggleList('acc50k')">Acc 50K</div>
+        <div id="acc50k" class="account-list">
+            <p>Acc 1: Level 2000 - Trái Quake</p>
+            <p>Acc 2: Level 2100 - Trái Rồng</p>
         </div>
-
-        <div class="category" onclick="toggleAccounts('acc100k')">Acc 100K</div>
-        <div id="acc100k" class="accounts">
-            <div class="account">Acc #5 - Level 2300 - Trái Bóng Tối</div>
-            <div class="account">Acc #6 - Level 2200 - Trái Quake</div>
+        
+        <div class="account-category" onclick="toggleList('acc100k')">Acc 100K</div>
+        <div id="acc100k" class="account-list">
+            <p>Acc 1: Level 2300 - Trái Bóng Tối</p>
+            <p>Acc 2: Level 2400 - Trái Rồng</p>
         </div>
     </div>
 
     <script>
-        function toggleAccounts(id) {
-            let element = document.getElementById(id);
-            element.style.display = element.style.display === 'block' ? 'none' : 'block';
+        function toggleList(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
         }
     </script>
 </body>
